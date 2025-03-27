@@ -1,0 +1,49 @@
+    :root {
+      --primary: #667eea;
+      --secondary: #5560ea;
+      --accent: #4a55e7;
+      --highlight: #4051e2;
+      --hover: #3545df;
+      --light: #ecf0f1;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      margin: 0;
+      padding-top: 60px;
+    }
+
+    .booking-form {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: var(--secondary);
+      border-radius: 10px;
+      color: white;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .booking-form button {
+      background-color: var(--highlight);
+      color: var(--light);
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: var(--accent);
+    }

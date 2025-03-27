@@ -1,0 +1,199 @@
+
+        :root {
+            --primary: #667eea;
+            --secondary: #5560ea;
+            --accent: #4a55e7;
+            --highlight: #4051e2;
+            --hover: #3545df;
+            --light: #ecf0f1;
+            --background: #2d3580;
+            --footer-bg: #2d2f3a;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            margin: 0;
+            background-color: var(--background);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light);
+          }
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease 0.2s;
+        }
+
+        .hero-slide.active .hero-title,
+        .hero-slide.active .hero-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            color: var(--light);
+            background-color: var(--accent);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease 0.4s;
+        }
+
+        .hero-slide.active .hero-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-btn:hover {
+            background-color: var(--hover);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Room Section */
+        #rooms h2 {
+            color: var(--light);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .room-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: var(--light);
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .room-image {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .room-info {
+            padding: 1.5rem;
+        }
+
+        .room-info h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .room-info p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .room-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--highlight);
+        }
+
+        .book-btn {
+            background-color: var(--highlight);
+            color: var(--light);
+            border: none; /* Remove border */
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center; /* Center text */
+            display: inline-block;
+            text-decoration: none; /* Remove text underline */
+        }
+        
+        .book-btn button {
+            border: none; /* Ensure no border for the button inside the anchor */
+            background: transparent; /* Make the button background transparent */
+            padding: 0; /* Remove padding */
+            font-size: inherit; /* Inherit font size from parent */
+            color: inherit; /* Inherit text color */
+        }
+        
+        .book-btn:hover {
+            background-color: var(--accent);
+        }
+        
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.2rem;
+            }
+        }

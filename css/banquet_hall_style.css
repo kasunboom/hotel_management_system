@@ -1,0 +1,393 @@
+:root {
+    --primary: #667eea;
+    --secondary: #5560ea;
+    --accent: #4a55e7;
+    --highlight: #4051e2;
+    --hover: #3545df;
+    --light: #ecf0f1;
+    --background: #2d3580;
+    --footer-bg: #2d2f3a;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.2s;
+}
+
+.hero-slide.active .hero-title,
+.hero-slide.active .hero-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--accent);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.4s;
+}
+
+.hero-slide.active .hero-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-btn:hover {
+    background-color: var(--hover);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Services section improvements */
+.services-section {
+    background-color: var(--background);
+    /* Deep blue background for the section */
+    color: var(--light);
+    /* Light text color */
+    padding: 5rem 0;
+}
+
+.card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--light);
+    /* Light background for cards */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary);
+    /* Change card background color to primary on hover */
+}
+
+.card .icon {
+    color: var(--highlight);
+    /* Highlight color for the icons */
+}
+
+.card .card-title {
+    color: var(--primary);
+    /* Primary color for card titles */
+}
+
+.card .card-text {
+    color: var(--secondary);
+    /* Secondary color for card text */
+}
+
+/* Menu Section Styling */
+.menu-section {
+    background-color: var(--background);
+    /* Deep blue background for the section */
+    color: var(--light);
+    /* Light text color */
+    padding: 5rem 0;
+}
+
+/* Category Title */
+.category-title {
+    color: var(--primary);
+    /* Primary color for the category title */
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Menu Item Cards */
+.menu-item {
+    background-color: var(--light);
+    /* Light background for menu items */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--primary);
+    /* Divider between image and info */
+}
+
+/* Menu Info */
+.menu-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.item-title {
+    color: var(--primary);
+    /* Primary color for item title */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.item-price {
+    color: var(--highlight);
+    /* Highlight color for the price */
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Bites Section */
+.bites-section .menu-item {
+    border-radius: 10px;
+}
+
+.bites-section .menu-info {
+    background-color: var(--secondary);
+    /* Muted blue for the bites section */
+}
+
+.bites-section .item-title {
+    color: var(--light);
+    /* Light text color for bite titles */
+}
+
+.bites-section .item-price {
+    color: var(--highlight);
+    /* Highlight color for the price */
+}
+
+/* For the list of items under categories (grilled dishes, pasta, etc.) */
+ul.list-unstyled {
+    padding-left: 0;
+    margin-top: 1rem;
+    color: var(--secondary);
+    /* Secondary color for the list text */
+}
+
+ul.list-unstyled li {
+    font-size: 1rem;
+    padding: 0.25rem 0;
+}
+
+ul.list-unstyled li:not(:last-child) {
+    border-bottom: 1px solid var(--light);
+    /* Light border between items */
+}
+
+ul.list-unstyled li span {
+    color: var(--highlight);
+    /* Price in highlight color */
+}
+
+/* Function Hall Information Section */
+.terms-section {
+    background-color: var(--background);
+    /* Deep blue background */
+    color: var(--light);
+    /* Light text color */
+    padding: 5rem 2rem;
+    /* More space around the section */
+}
+
+/* Section Title */
+.terms-section h2 {
+    color: var(--primary);
+    /* Primary color for the section title */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Info Cards Grid Layout */
+.info-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Info Card */
+.info-card {
+    background-color: var(--light);
+    /* Light background for cards */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Titles */
+.info-card h3 {
+    color: var(--primary);
+    /* Primary color for the card title */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Lists inside cards */
+.complimentary-list,
+.terms-list {
+    list-style-type: none;
+    padding-left: 0;
+    color: var(--secondary);
+    /* Secondary text color */
+}
+
+.complimentary-list li,
+.terms-list li {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+/* Table Styling for Charges */
+.charges-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Light gray background for the table */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevent overflow when the table is rounded */
+}
+
+/* Table Header */
+.charges-table th {
+    padding: 1.5rem;
+    text-align: left;
+    background-color: var(--primary); /* Primary color for headers */
+    color: #fff; /* White text color for headers */
+    font-size: 1.1rem; /* Larger font size for headers */
+    border-bottom: 3px solid #fff; /* White border to separate header from body */
+}
+
+/* Table Rows */
+.charges-table td {
+    padding: 1.5rem;
+    text-align: left;
+    background-color: var(--light); /* Light background for the rows */
+    color: var(--secondary); /* Secondary text color for better contrast */
+    font-size: 1rem;
+    border-bottom: 1px solid var(--background); /* Light blue border between rows */
+}
+
+/* Hover Effect on Rows */
+.charges-table tr:hover td {
+    background-color: var(--hover); /* Highlight row on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+/* First Row (Header) - Hover Effect */
+.charges-table th:hover {
+    background-color: var(--highlight); /* Slightly darker background on hover */
+    color: #fff;
+}
+
+/* Zebra Stripes for Table Rows */
+.charges-table tr:nth-child(even) td {
+    background-color: #f4f7fc; /* Light striped background for even rows */
+}
+
+.charges-table tr:nth-child(odd) td {
+    background-color: var(--light); /* Standard light background for odd rows */
+}
+
+/* Borders */
+.charges-table {
+    border: 1px solid #e0e0e0; /* Light gray border around the table */
+}
+
+.charges-table td,
+.charges-table th {
+    border-left: 1px solid #e0e0e0; /* Vertical border between columns */
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .charges-table th,
+    .charges-table td {
+        padding: 1rem;
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+}

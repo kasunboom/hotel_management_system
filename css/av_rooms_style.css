@@ -1,0 +1,158 @@
+
+/* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-area {
+            padding: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            margin-bottom: 2rem;
+        }
+
+        /* Header Section */
+        .page-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header .breadcrumb {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        /* Search and Filters */
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .search-bar input {
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 300px;
+            font-size: 0.875rem;
+        }
+
+        .filter-dropdown {
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            font-size: 0.875rem;
+            background: white;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .pagination button {
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 0.25rem;
+        }
+
+        .pagination button:hover {
+            background: #4c6dca;
+        }
+
+        /* Table Styles */
+        .room-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .room-table th,
+        .room-table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .room-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .room-table tr:nth-child(even) {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .room-table tr:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button.view-room {
+            background: #38b2ac;
+        }
+
+        .button.view-room:hover {
+            background: #2c7a7b;
+        }
+
+        .button.book-room {
+            background: #f6ad55;
+        }
+
+        .button.book-room:hover {
+            background: #ed8936;
+        }
+
+        .button.details-room {
+            background: #38a169;
+        }
+
+        .button.details-room:hover {
+            background: #2f855a;
+        }
+
+        .button.delete-room {
+            background: #e53e3e;
+        }
+
+        .button.delete-room:hover {
+            background: #c53030;
+        }

@@ -1,0 +1,93 @@
+:root {
+    --primary: #667eea;
+    --secondary: #5560ea;
+    --accent: #4a55e7;
+    --highlight: #4051e2;
+    --hover: #3545df;
+    --light: #ecf0f1;
+    --background: #2d3580;
+    --footer-bg: #2d2f3a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    background-color: var(--background);
+}
+
+
+/* Settings Container Styles */
+.settings-container {
+    max-width: 600px;
+    margin: 80px auto;
+    /* Adjusted margin-top for fixed navbar */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+button.save-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.save-btn:hover {
+    background-color: var(--hover);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle label {
+    margin-right: 10px;
+}
+
+.toggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

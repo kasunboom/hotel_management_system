@@ -1,0 +1,156 @@
+:root {
+    --primary: #667eea;
+    --secondary: #5560ea;
+    --accent: #4a55e7;
+    --highlight: #4051e2;
+    --hover: #3545df;
+    --light: #ecf0f1;
+    --error: #dc3545;
+    --success: #28a745;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 60px;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.charges-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--light);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.charges-section h3 {
+    font-size: 1.75rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.charges-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background-color: var(--highlight);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--hover);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background-color: #fff5f5;
+    border: 1px solid var(--error);
+    color: var(--error);
+}
+
+.alert-success {
+    background-color: #f0fff4;
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.was-validated .form-control:invalid {
+    border-color: var(--error);
+}
+
+.was-validated .form-control:valid {
+    border-color: var(--success);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 30px;
+    }
+
+    .charges-section,
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .submit-btn {
+        padding: 0.875rem 1.5rem;
+    }
+}

@@ -1,0 +1,22 @@
+/** styles.css **/
+body {
+    font-family: Arial, sans-serif;
+}
+.dashboard {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+}
+.links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
